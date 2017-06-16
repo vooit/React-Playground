@@ -1,0 +1,48 @@
+#app {
+  display: flex;
+  justify-content: center;
+  background: blueviolet;
+}
+
+.page-extras {
+  font-size: 1em;
+}
+
+.page-header {
+  color: #fff;
+}
+
+.state-component {
+  background: pink;
+}
+
+.container--blue {
+  background: orange;
+}
+
+.challange-container {
+  margin: 0 auto;
+  width:800px;
+  h1 {
+    text-align: center;
+  }
+  .btn-red {
+    background: red;
+  }
+  .btn-blue {
+    background: blue;
+  }
+  .btn-green{
+    background: green;
+  }
+  .btn {
+    width:150px;
+    height:40px;
+    border:inset 2px solid black;
+    font:"Lato";
+    font-size: 22px;
+    font-weight:bold;
+    color:white;
+    margin: 0 2em;
+  }
+}
