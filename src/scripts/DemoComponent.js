@@ -3,6 +3,8 @@ import DemoComponentHeader from './DemoComponentHeader';
 import MyDemoComponent from './MyDemoComponent';
 import MyStateComponent from './MyStateComponent'
 import MyChallangeComponent from "./MyChallangeComponent";
+import MyStatelessComponent from "./MyStatelessComponent";
+import Container from "./MyHigherOrderComponent";
 
 class DemoComponent extends React.Component {
     render() {
@@ -10,12 +12,14 @@ class DemoComponent extends React.Component {
             <div>
                 <DemoComponentHeader />
                 <div className="container">
-                    <p>A simple React Webpack 2.0 babel kit with bootstrap framework</p>
+
                     <MyDemoComponent />
                     <MyStateComponent />
 
                 </div>
                 <MyChallangeComponent/>
+                <MyStatelessComponent/>
+                <Container/>
             </div>
         )
     }

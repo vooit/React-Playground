@@ -10,7 +10,6 @@ class MyChallangeComponent extends React.Component {
         this.state = {
             count: 0
         };
-        // this.incrementCount = this.incrementCount.bind(this, this.props.valueOne);
     };
 
     incrementCount(value) {
@@ -23,15 +22,19 @@ class MyChallangeComponent extends React.Component {
         // let valueOne = this.props.valueOne;
         // let valueFive = this.props.valueFive;
         // let valueTen = this.props.valueFive;
-
-
         return (
             <div className="container container--blue">
                 <div className="challange-container ">
                     <h1>Count : {this.state.count}</h1>
-                    <Buttons style='btn btn-red' value={this.props.valueOne} clickHandler={this.incrementCount.bind(this, this.props.valueOne)}/>
-                    <Buttons style='btn btn-blue' value={this.props.valueFive} clickHandler={this.incrementCount.bind(this, this.props.valueFive)}/>
-                    <Buttons style='btn btn-green' value={this.props.valueTen} clickHandler={this.incrementCount.bind(this, this.props.valueTen)}/>
+                    <Buttons style='btn btn-red' text={this.props.text + " " + this.props.valueOne}
+                             value={this.props.valueOne}
+                             clickHandler={this.incrementCount.bind(this, this.props.valueOne)}/>
+                    <Buttons style='btn btn-blue' text={this.props.text + " " + this.props.valueFive}
+                             value={this.props.valueFive}
+                             clickHandler={this.incrementCount.bind(this, this.props.valueFive)}/>
+                    <Buttons style='btn btn-green' text={this.props.text + " " + this.props.valueTen}
+                             value={this.props.valueTen}
+                             clickHandler={this.incrementCount.bind(this, this.props.valueTen)}/>
                 </div>
             </div>
         )
@@ -40,12 +43,12 @@ class MyChallangeComponent extends React.Component {
 MyChallangeComponent.defaultProps = {
     valueOne: 1,
     valueFive: 5,
-    valueTen: 10
+    valueTen: 10,
+    text: 'Add'
 };
 
-
 function Buttons(props) {
-    return <button className={props.style} value={props.value} onClick={props.clickHandler}>Add {props.value}</button>;
+    return <button className={props.style} value={props.value} onClick={props.clickHandler}>{props.text}</button>;
 }
 
 export default MyChallangeComponent;

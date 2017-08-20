@@ -9,6 +9,7 @@ class MyDemoComponent extends React.Component {
             <div className="page-extras">
                 <h1>Hello, {name}</h1>
                 <h2>I live in {location}</h2>
+                <h2>This is my simple playground for React to get the basics...</h2>
             </div>
         );
     }
